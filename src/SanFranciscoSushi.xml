@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query>
+    <diagnostics>
+        <publiclyCallable>true</publiclyCallable>
+        <user-time>282</user-time>
+        <service-time>244</service-time>
+        <build-version>38230</build-version>
+    </diagnostics> 
+    <results>
+        <Result id="21373494">
+            <Title>Sushi Bistro</Title>
+            <Address>455 Balboa St</Address>
+            <City>San Francisco</City>
+            <State>CA</State>
+            <Phone>(415) 933-7100</Phone>
+            <Latitude>37.7771</Latitude>
+            <Longitude>-122.463517</Longitude>
+            <Rating>
+                <AverageRating>5</AverageRating>
+                <TotalRatings>37</TotalRatings>
+                <TotalReviews>37</TotalReviews>
+                <LastReviewDate>1286309799</LastReviewDate>
+                <LastReviewIntro> Nice place: I enjoyed this place very much, the food was very good! The sushi was fresh and very tasty. I like the variety in the menu and the presentation of the food was a nice amenity. I was a little disappointed with the ambiance. Not a bad thing, I thought it would be a little bit more lively and crowded, but instead of it was more quiet than I thought. Which wasnt a bad thing, since my friend and I didnt have to wait for a table and could hear each other talk. Overall, I would recommend this place, but I little bit overrated, I thought reading from the other reviewers.</LastReviewIntro>
+            </Rating>
+            <Distance>2.40</Distance>
+            <Url>http://local.yahoo.com/info-21373494-sushi-bistro-san-francisco</Url>
+            <ClickUrl>http://local.yahoo.com/info-21373494-sushi-bistro-san-francisco</ClickUrl>
+            <MapUrl>http://local.yahoo.com/info-21373494-sushi-bistro-san-francisco?viewtype=map</MapUrl>
+            <BusinessUrl>http://www.sushibistrosf.com</BusinessUrl>
+            <BusinessClickUrl>http://www.sushibistrosf.com</BusinessClickUrl>
+            <Categories>
+                <Category id="96926236">Restaurants</Category>
+                <Category id="96926205">Sushi Restaurants</Category>
+                <Category id="96926210">Japanese Restaurants</Category>
+            </Categories>
+        </Result>
+        <Result id="21382989">
+            <Title>Ebisu Sushi</Title>
+            <Address>1283 9th Ave</Address>
+            <City>San Francisco</City>
+            <State>CA</State>
+            <Phone>(415) 566-1770</Phone>
+            <Latitude>37.76448</Latitude>
+            <Longitude>-122.466517</Longitude>
+            <Rating>
+                <AverageRating>4.5</AverageRating>
+                <TotalRatings>38</TotalRatings>
+                <TotalReviews>38</TotalReviews>
+                <LastReviewDate>1368723727</LastReviewDate>
+                <LastReviewIntro> This is the best sushi in SF so far. Its the freshest tasting and has some of the most original sushi dishes Ive found yet. The bacon wrapped scallops, seafood salad and pink cadillac are especially worth noting. Service and atmosphere are nice as well. I cant wait to try the next thing, their menu is loaded with tasty options.</LastReviewIntro>
+            </Rating>
+            <Distance>2.71</Distance>
+            <Url>http://local.yahoo.com/info-21382989-ebisu-sushi-san-francisco</Url>
+            <ClickUrl>http://local.yahoo.com/info-21382989-ebisu-sushi-san-francisco</ClickUrl>
+            <MapUrl>http://local.yahoo.com/info-21382989-ebisu-sushi-san-francisco?viewtype=map</MapUrl>
+            <BusinessUrl>http://www.ebisusushi.com/</BusinessUrl>
+            <BusinessClickUrl>http://www.ebisusushi.com/</BusinessClickUrl>
+            <Categories>
+                <Category id="96926205">Sushi Restaurants</Category>
+                <Category id="96926057">Bars &amp; Pubs</Category>
+                <Category id="96926236">Restaurants</Category>
+                <Category id="96926210">Japanese Restaurants</Category>
+            </Categories>
+        </Result>
+        <Result id="21361882">
+            <Title>Blowfish Sushi to Die for - SF</Title>
+            <Address>2170 Bryant St</Address>
+            <City>San Francisco</City>
+            <State>CA</State>
+            <Phone>(415) 285-3848</Phone>
+            <Latitude>37.759611</Latitude>
+            <Longitude>-122.41009</Longitude>
+            <Rating>
+                <AverageRating>4</AverageRating>
+                <TotalRatings>43</TotalRatings>
+                <TotalReviews>43</TotalReviews>
+                <LastReviewDate>1273879621</LastReviewDate>
+                <LastReviewIntro> My friends and I have been to Blowfish probably 100 times in the past 7 years. I live 1 block away. It was convenient and the sushi is good. We always tolerated the bad service and the attitude. Of the 100 times weve been, weve probably had good service 20% of the time. Despite the frequency of our patronage we rarely got recognized by the staff and OFTEN waited 20-25 minutes (or more) for drink orders, the check, etc... and the attitude and aloofness was palpable. The last time I went I sat at the bar and a male bartender clearly seemed annoyed with us for no reason at all. We begged for drinks, opened our own Sake bottle (not twist off - corkscrew), and were pretty much ignored all night long - right down to waiting FOREVER for our bill. I told my friends "this is the last time...." Its embarrassing to bring in guests from out of town. I eat out 99% of the time and they have the worst service I have ever consistently experienced.Do yourself a favor go to nearby Live Sushi Bar or Sushi Bistro and be waited on by people who smile with no attitude. The sushi at both places is excellent too.and Blowfish...get over yourself.dont dont, dont, dont...dont believe the hype.....Chris B</LastReviewIntro>
+            </Rating>
+            <Distance>1.32</Distance>
+            <Url>http://local.yahoo.com/info-21361882-blowfish-sushi-to-die-for-sf-san-francisco</Url>
+            <ClickUrl>http://local.yahoo.com/info-21361882-blowfish-sushi-to-die-for-sf-san-francisco</ClickUrl>
+            <MapUrl>http://local.yahoo.com/info-21361882-blowfish-sushi-to-die-for-sf-san-francisco?viewtype=map</MapUrl>
+            <BusinessUrl>http://www.blowfishsushi.com/webform1.aspx?bhcp=1</BusinessUrl>
+            <BusinessClickUrl>http://www.blowfishsushi.com/webform1.aspx?bhcp=1</BusinessClickUrl>
+            <Categories>
+                <Category id="96926236">Restaurants</Category>
+                <Category id="96926229">Southeast Asian Restaurants</Category>
+                <Category id="96926205">Sushi Restaurants</Category>
+                <Category id="96926164">Chinese Restaurants</Category>
+                <Category id="96926179">Seafood Restaurants</Category>
+                <Category id="96926210">Japanese Restaurants</Category>
+            </Categories>
+        </Result>
+        <Result id="21348180">
+            <Title>Sanraku</Title>
+            <Address>704 Sutter St</Address>
+            <City>San Francisco</City>
+            <State>CA</State>
+            <Phone>(415) 771-0803</Phone>
+            <Latitude>37.789003</Latitude>
+            <Longitude>-122.412193</Longitude>
+            <Rating>
+                <AverageRating>5</AverageRating>
+                <TotalRatings>9</TotalRatings>
+                <TotalReviews>9</TotalReviews>
+                <LastReviewDate>1165107495</LastReviewDate>
+                <LastReviewIntro> The place was packed for a Thursday night. The prices on the menu were reasonable and cheap. We were able to sit down after a short wait. However, the food was horrible. We ordered a starter -tuna tar tar, spicy salmon sushi, uni sushi,beef teriyaki (medium rare) w/ sashimi. The restaurant was so busy that our food came after a 20 min. wait.Whats worst is they first served a well done beef teriyaki with rice. Then after following up our other orders bec another 10 mins passed they served the sashimi and sushi. The uni sushi was great but the spicy salmon was not a bit spicy.I was disappointed. The last order that arrived was our starter-the tuna tar tar. Overall, we did not have a good experience with this restaurant with such high reviews.</LastReviewIntro>
+            </Rating>
+            <Distance>0.92</Distance>
+            <Url>http://local.yahoo.com/info-21348180-sanraku-san-francisco</Url>
+            <ClickUrl>http://local.yahoo.com/info-21348180-sanraku-san-francisco</ClickUrl>
+            <MapUrl>http://local.yahoo.com/info-21348180-sanraku-san-francisco?viewtype=map</MapUrl>
+            <BusinessUrl>http://www.sanraku.com</BusinessUrl>
+            <BusinessClickUrl>http://www.sanraku.com</BusinessClickUrl>
+            <Categories>
+                <Category id="96926205">Sushi Restaurants</Category>
+                <Category id="96926210">Japanese Restaurants</Category>
+            </Categories>
+        </Result>
+        <Result id="21332684">
+            <Title>Sushi Zone</Title>
+            <Address>1815 Market St</Address>
+            <City>San Francisco</City>
+            <State>CA</State>
+            <Phone>(415) 621-1114</Phone>
+            <Latitude>37.77123</Latitude>
+            <Longitude>-122.423737</Longitude>
+            <Rating>
+                <AverageRating>4.5</AverageRating>
+                <TotalRatings>19</TotalRatings>
+                <TotalReviews>19</TotalReviews>
+                <LastReviewDate>1226510518</LastReviewDate>
+                <LastReviewIntro> great fish, watch the glass! and call ahead! (the lines are long). first a warning: you can wait up to 2hrs to get in here (my friends say in all sincerity). well I went for the 3rd time last thursday and there was no wait, but the waitress broke a glass and I found a glass chip by my sushi roll! it kinda freaked me out. so ah I am giving them 3 stars, only because I pointed out the glass chip and the waitress basically said "so what" ! ha. VERY nice sushi maker guy though...</LastReviewIntro>
+            </Rating>
+            <Distance>0.46</Distance>
+            <Url>http://local.yahoo.com/info-21332684-sushi-zone-san-francisco</Url>
+            <ClickUrl>http://local.yahoo.com/info-21332684-sushi-zone-san-francisco</ClickUrl>
+            <MapUrl>http://local.yahoo.com/info-21332684-sushi-zone-san-francisco?viewtype=map</MapUrl>
+            <BusinessUrl>http://www.sushi-zone.com/</BusinessUrl>
+            <BusinessClickUrl>http://www.sushi-zone.com/</BusinessClickUrl>
+            <Categories>
+                <Category id="96926236">Restaurants</Category>
+                <Category id="96926229">Southeast Asian Restaurants</Category>
+                <Category id="96926164">Chinese Restaurants</Category>
+                <Category id="96926210">Japanese Restaurants</Category>
+            </Categories>
+        </Result>
+        <Result id="21358371">
+            <Title>Warakubune Sushi Restaurant</Title>
+            <Address>307 Church St</Address>
+            <City>San Francisco</City>
+            <State>CA</State>
+            <Phone>(415) 252-8383</Phone>
+            <Latitude>37.765943</Latitude>
+            <Longitude>-122.42852</Longitude>
+            <Rating>
+                <AverageRating>5</AverageRating>
+                <TotalRatings>9</TotalRatings>
+                <TotalReviews>9</TotalReviews>
+                <LastReviewDate>1222672364</LastReviewDate>
+                <LastReviewIntro> very good resturant!!!Awesome food and enviroment .Bit costly</LastReviewIntro>
+            </Rating>
+            <Distance>0.91</Distance>
+            <Url>http://local.yahoo.com/info-21358371-warakubune-sushi-restaurant-san-francisco</Url>
+            <ClickUrl>http://local.yahoo.com/info-21358371-warakubune-sushi-restaurant-san-francisco</ClickUrl>
+            <MapUrl>http://local.yahoo.com/info-21358371-warakubune-sushi-restaurant-san-francisco?viewtype=map</MapUrl>
+            <BusinessUrl/>
+            <BusinessClickUrl/>
+            <Categories>
+                <Category id="96926236">Restaurants</Category>
+                <Category id="96926229">Southeast Asian Restaurants</Category>
+                <Category id="96926164">Chinese Restaurants</Category>
+                <Category id="96926210">Japanese Restaurants</Category>
+            </Categories>
+        </Result>
+        <Result id="21386527">
+            <Title>Deep Noe Sushi</Title>
+            <Address>1740 Church St</Address>
+            <City>San Francisco</City>
+            <State>CA</State>
+            <Phone>(415) 648-3337</Phone>
+            <Latitude>37.74307</Latitude>
+            <Longitude>-122.426888</Longitude>
+            <Rating>
+                <AverageRating>4.5</AverageRating>
+                <TotalRatings>15</TotalRatings>
+                <TotalReviews>15</TotalReviews>
+                <LastReviewDate>1198212806</LastReviewDate>
+                <LastReviewIntro> Great Sushi! It is a fun place overall. A bit small, but it makes the place cozy. I live in the City so I will definitely go back again.</LastReviewIntro>
+            </Rating>
+            <Distance>2.39</Distance>
+            <Url>http://local.yahoo.com/info-21386527-deep-noe-sushi-san-francisco</Url>
+            <ClickUrl>http://local.yahoo.com/info-21386527-deep-noe-sushi-san-francisco</ClickUrl>
+            <MapUrl>http://local.yahoo.com/info-21386527-deep-noe-sushi-san-francisco?viewtype=map</MapUrl>
+            <BusinessUrl>http://www.deepsushi-sf.com/</BusinessUrl>
+            <BusinessClickUrl>http://www.deepsushi-sf.com/</BusinessClickUrl>
+            <Categories/>
+        </Result>
+        <Result id="21332685">
+            <Title>Tokyo Go Go</Title>
+            <Address>3174 16th St</Address>
+            <City>San Francisco</City>
+            <State>CA</State>
+            <Phone>(415) 864-2288</Phone>
+            <Latitude>37.764943</Latitude>
+            <Longitude>-122.423538</Longitude>
+            <Rating>
+                <AverageRating>5</AverageRating>
+                <TotalRatings>11</TotalRatings>
+                <TotalReviews>11</TotalReviews>
+                <LastReviewDate>1222466662</LastReviewDate>
+                <LastReviewIntro> I can easily rate this as the best sushi restaurant I have ever encountered. There is a roll with asparagus and Sake, with a thin slice of lemon on top. The flavors are unreal!!! Everyone there is very friendly and professional. I live 40 miles away, and there are literally hundreds of japanese restaurants between my home and Tpkyo GoGo, and when I want the best, I go here.</LastReviewIntro>
+            </Rating>
+            <Distance>0.87</Distance>
+            <Url>http://local.yahoo.com/info-21332685-tokyo-go-go-san-francisco</Url>
+            <ClickUrl>http://local.yahoo.com/info-21332685-tokyo-go-go-san-francisco</ClickUrl>
+            <MapUrl>http://local.yahoo.com/info-21332685-tokyo-go-go-san-francisco?viewtype=map</MapUrl>
+            <BusinessUrl>http://www.tokyogogo.com/</BusinessUrl>
+            <BusinessClickUrl>http://www.tokyogogo.com/</BusinessClickUrl>
+            <Categories>
+                <Category id="96926236">Restaurants</Category>
+                <Category id="96926229">Southeast Asian Restaurants</Category>
+                <Category id="96926205">Sushi Restaurants</Category>
+                <Category id="96926210">Japanese Restaurants</Category>
+            </Categories>
+        </Result>
+        <Result id="21362386">
+            <Title>Godzilla Sushi</Title>
+            <Address>1800 Divisadero St</Address>
+            <City>San Francisco</City>
+            <State>CA</State>
+            <Phone>(415) 931-1773</Phone>
+            <Latitude>37.786355</Latitude>
+            <Longitude>-122.439903</Longitude>
+            <Rating>
+                <AverageRating>4.5</AverageRating>
+                <TotalRatings>13</TotalRatings>
+                <TotalReviews>13</TotalReviews>
+                <LastReviewDate>1185406279</LastReviewDate>
+                <LastReviewIntro> Love this place!</LastReviewIntro>
+            </Rating>
+            <Distance>1.28</Distance>
+            <Url>http://local.yahoo.com/info-21362386-godzilla-sushi-san-francisco</Url>
+            <ClickUrl>http://local.yahoo.com/info-21362386-godzilla-sushi-san-francisco</ClickUrl>
+            <MapUrl>http://local.yahoo.com/info-21362386-godzilla-sushi-san-francisco?viewtype=map</MapUrl>
+            <BusinessUrl>http://www.godzilasushi.com/</BusinessUrl>
+            <BusinessClickUrl>http://www.godzilasushi.com/</BusinessClickUrl>
+            <Categories>
+                <Category id="96926236">Restaurants</Category>
+                <Category id="96926234">Carry Out &amp; Take Out</Category>
+                <Category id="96926229">Southeast Asian Restaurants</Category>
+                <Category id="96926205">Sushi Restaurants</Category>
+                <Category id="96926164">Chinese Restaurants</Category>
+                <Category id="96926210">Japanese Restaurants</Category>
+            </Categories>
+        </Result>
+        <Result id="21384019">
+            <Title>Goemon Japanese Restaurant</Title>
+            <Address>1524 Irving St</Address>
+            <City>San Francisco</City>
+            <State>CA</State>
+            <Phone>(415) 664-2288</Phone>
+            <Latitude>37.763823</Latitude>
+            <Longitude>-122.474249</Longitude>
+            <Rating>
+                <AverageRating>5</AverageRating>
+                <TotalRatings>9</TotalRatings>
+                <TotalReviews>9</TotalReviews>
+                <LastReviewDate>1295310286</LastReviewDate>
+                <LastReviewIntro> The food is great and the atmosphere is great!!!Too bad Gan was a abusive father,...If you dont believe me, then ask him about his son.</LastReviewIntro>
+            </Rating>
+            <Distance>3.12</Distance>
+            <Url>http://local.yahoo.com/info-21384019-goemon-japanese-restaurant-san-francisco</Url>
+            <ClickUrl>http://local.yahoo.com/info-21384019-goemon-japanese-restaurant-san-francisco</ClickUrl>
+            <MapUrl>http://local.yahoo.com/info-21384019-goemon-japanese-restaurant-san-francisco?viewtype=map</MapUrl>
+            <BusinessUrl/>
+            <BusinessClickUrl/>
+            <Categories>
+                <Category id="96926236">Restaurants</Category>
+                <Category id="96926229">Southeast Asian Restaurants</Category>
+                <Category id="96926205">Sushi Restaurants</Category>
+                <Category id="96926210">Japanese Restaurants</Category>
+            </Categories>
+        </Result>
+    </results>
+</query>
+ 

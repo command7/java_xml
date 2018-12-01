@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query>
+    <diagnostics>
+        <publiclyCallable>true</publiclyCallable>
+        <javascript execution-time="327" instructions-used="0" table-name="local.search"/>
+        <user-time>330</user-time>
+        <service-time>289</service-time>
+        <build-version>0.2.1593</build-version>
+    </diagnostics> 
+    <results>
+        <Result id="32074693">
+            <Title>House of Sushi</Title>
+            <Address>101 East Ave</Address>
+            <City>Rochester</City>
+            <State>NY</State>
+            <Phone>(585) 546-2480</Phone>
+            <Latitude>43.156362</Latitude>
+            <Longitude>-77.601418</Longitude>
+            <Rating>
+                <AverageRating>5</AverageRating>
+                <TotalRatings>2</TotalRatings>
+                <TotalReviews>2</TotalReviews>
+                <LastReviewDate>1321274464</LastReviewDate>
+                <LastReviewIntro> Hey, take a look at this. I went into the draw to win an iPad2 and won! All I did was choose a colour, submit my email and two days later I found out I won! Theyre still giving them away, check out freeipodoffers.com!</LastReviewIntro>
+            </Rating>
+            <Distance>0.74</Distance>
+            <Url>http://local.yahoo.com/info-32074693-house-of-sushi-rochester</Url>
+            <ClickUrl>http://local.yahoo.com/info-32074693-house-of-sushi-rochester</ClickUrl>
+            <MapUrl>http://local.yahoo.com/info-32074693-house-of-sushi-rochester?viewtype=map</MapUrl>
+            <BusinessUrl>http://www.houseofsushi.com/</BusinessUrl>
+            <BusinessClickUrl>http://www.houseofsushi.com/</BusinessClickUrl>
+            <Categories>
+                <Category id="96926236">Restaurants</Category>
+                <Category id="96926205">Sushi Restaurants</Category>
+                <Category id="96926164">Chinese Restaurants</Category>
+            </Categories>
+        </Result>
+        <Result id="27710851">
+            <Title>Shiki Japanese Restaurant</Title>
+            <Address>1054 Clinton Ave S</Address>
+            <City>Rochester</City>
+            <State>NY</State>
+            <Phone>(585) 271-2090</Phone>
+            <Latitude>43.137921</Latitude>
+            <Longitude>-77.594383</Longitude>
+            <Rating>
+                <AverageRating>5</AverageRating>
+                <TotalRatings>5</TotalRatings>
+                <TotalReviews>5</TotalReviews>
+                <LastReviewDate>1299008431</LastReviewDate>
+                <LastReviewIntro> No curb appeal, but what an interior! Fun Japanese pop music. Sweet, amiable staff. Not the cheapest sushi experience Ive had, but the food and service were top notch.</LastReviewIntro>
+            </Rating>
+            <Distance>1.63</Distance>
+            <Url>http://local.yahoo.com/info-27710851-shiki-japanese-restaurant-rochester</Url>
+            <ClickUrl>http://local.yahoo.com/info-27710851-shiki-japanese-restaurant-rochester</ClickUrl>
+            <MapUrl>http://local.yahoo.com/info-27710851-shiki-japanese-restaurant-rochester?viewtype=map</MapUrl>
+            <BusinessUrl>http://www.shikirestaurant.com/</BusinessUrl>
+            <BusinessClickUrl>http://www.shikirestaurant.com/</BusinessClickUrl>
+            <Categories>
+                <Category id="96926236">Restaurants</Category>
+                <Category id="96926210">Japanese Restaurants</Category>
+            </Categories>
+        </Result>
+        <Result id="28389978">
+            <Title>Kobay Japanese Restaurant</Title>
+            <Address>690 Park Ave</Address>
+            <City>Rochester</City>
+            <State>NY</State>
+            <Phone>(585) 271-1060</Phone>
+            <Latitude>43.148069</Latitude>
+            <Longitude>-77.577133</Longitude>
+            <Rating>
+                <AverageRating>5</AverageRating>
+                <TotalRatings>5</TotalRatings>
+                <TotalReviews>5</TotalReviews>
+                <LastReviewDate>1243606605</LastReviewDate>
+                <LastReviewIntro> the best restaurant in Rochester: I have been here a couple of times now, and have been more impressed each time. Went there with friends, and with my mom. superb service, and you cant get much better food. The servers wont let your glass get empty, and dont hurry you out at all. Wonderful place to eat dinner.</LastReviewIntro>
+            </Rating>
+            <Distance>2.03</Distance>
+            <Url>http://local.yahoo.com/info-28389978-kobay-japanese-restaurant-rochester</Url>
+            <ClickUrl>http://local.yahoo.com/info-28389978-kobay-japanese-restaurant-rochester</ClickUrl>
+            <MapUrl>http://local.yahoo.com/info-28389978-kobay-japanese-restaurant-rochester?viewtype=map</MapUrl>
+            <BusinessUrl/>
+            <BusinessClickUrl/>
+            <Categories>
+                <Category id="96926210">Japanese Restaurants</Category>
+            </Categories>
+        </Result>
+        <Result id="11778530">
+            <Title>Tokyo Japanese Restaurant</Title>
+            <Address>2930 W Henrietta Rd</Address>
+            <City>Rochester</City>
+            <State>NY</State>
+            <Phone>(585) 424-4166</Phone>
+            <Latitude>43.09308</Latitude>
+            <Longitude>-77.632812</Longitude>
+            <Rating>
+                <AverageRating>4</AverageRating>
+                <TotalRatings>9</TotalRatings>
+                <TotalReviews>9</TotalReviews>
+                <LastReviewDate>1329274941</LastReviewDate>
+                <LastReviewIntro> 1) Service was lousy. -25 minutes to get a drink -Asked for silverware when appetizers were delivered. After they delivered salad I got up and got my own. -Had to ask for water multiple times2) All the food for our end of the table was totally over cooked.3) Extras were not offered to our end of the table. 3 times it was offered to the same people at the other end of the table. They left with more left overs than I received for my total meal. I LEFT HUNGRY.4) Forgot to bring one of the appetizers and had to ask again for it. They finally brought it out at the end of the meal5) Chefs skill was questionable. Portions not equal. Some food was burnt. Steak was way over cooked and chewy low grade of meat.6) Only one chef for four tables and had to wait a long time.Bottom line wont eat there again.</LastReviewIntro>
+            </Rating>
+            <Distance>4.40</Distance>
+            <Url>http://local.yahoo.com/info-11778530-tokyo-japanese-restaurant-rochester</Url>
+            <ClickUrl>http://local.yahoo.com/info-11778530-tokyo-japanese-restaurant-rochester</ClickUrl>
+            <MapUrl>http://local.yahoo.com/info-11778530-tokyo-japanese-restaurant-rochester?viewtype=map</MapUrl>
+            <BusinessUrl>http://www.tokyorestaurantrochester.com/</BusinessUrl>
+            <BusinessClickUrl>http://www.tokyorestaurantrochester.com/</BusinessClickUrl>
+            <Categories>
+                <Category id="96928851">Wedding Venues</Category>
+                <Category id="96926236">Restaurants</Category>
+                <Category id="96925848">Banquet Rooms</Category>
+                <Category id="96926210">Japanese Restaurants</Category>
+            </Categories>
+        </Result>
+        <Result id="49570235">
+            <Title>Piranha</Title>
+            <Address>682 Park Ave</Address>
+            <City>Rochester</City>
+            <State>NY</State>
+            <Phone>(585) 360-2754</Phone>
+            <Latitude>43.148171</Latitude>
+            <Longitude>-77.577499</Longitude>
+            <Rating>
+                <AverageRating>4</AverageRating>
+                <TotalRatings>4</TotalRatings>
+                <TotalReviews>4</TotalReviews>
+                <LastReviewDate>1284081418</LastReviewDate>
+                <LastReviewIntro> My favorite restaurant anywhere right here in Rochester! Not just sushi Piranha has appetizers and entrees too. Great place for you sushi lovers to go with your non sushi friends. The place is urban cool and the food is fantastic! Great service too.</LastReviewIntro>
+            </Rating>
+            <Distance>2.01</Distance>
+            <Url>http://local.yahoo.com/info-49570235-piranha-rochester</Url>
+            <ClickUrl>http://local.yahoo.com/info-49570235-piranha-rochester</ClickUrl>
+            <MapUrl>http://local.yahoo.com/info-49570235-piranha-rochester?viewtype=map</MapUrl>
+            <BusinessUrl>http://piranhasushibar.com/</BusinessUrl>
+            <BusinessClickUrl>http://piranhasushibar.com/</BusinessClickUrl>
+            <Categories>
+                <Category id="96926236">Restaurants</Category>
+            </Categories>
+        </Result>
+        <Result id="46430783">
+            <Title>Sakura Home</Title>
+            <Address>2775 Monroe Ave</Address>
+            <City>Rochester</City>
+            <State>NY</State>
+            <Phone>(585) 288-8130</Phone>
+            <Latitude>43.112203</Latitude>
+            <Longitude>-77.550369</Longitude>
+            <Rating>
+                <AverageRating>5</AverageRating>
+                <TotalRatings>3</TotalRatings>
+                <TotalReviews>3</TotalReviews>
+                <LastReviewDate>1284041203</LastReviewDate>
+                <LastReviewIntro> The sushi at Sakura home is some of the best weve ever eaten. The service is excellent, atmosphere is very casual but sophisticated, and the prices are very reasonable for the food that you get.</LastReviewIntro>
+            </Rating>
+            <Distance>4.47</Distance>
+            <Url>http://local.yahoo.com/info-46430783-sakura-home-rochester</Url>
+            <ClickUrl>http://local.yahoo.com/info-46430783-sakura-home-rochester</ClickUrl>
+            <MapUrl>http://local.yahoo.com/info-46430783-sakura-home-rochester?viewtype=map</MapUrl>
+            <BusinessUrl>http://sakurahomerestaurant.com/splash/</BusinessUrl>
+            <BusinessClickUrl>http://sakurahomerestaurant.com/splash/</BusinessClickUrl>
+            <Categories>
+                <Category id="96926236">Restaurants</Category>
+                <Category id="96926210">Japanese Restaurants</Category>
+            </Categories>
+        </Result>
+        <Result id="11775468">
+            <Title>Plum Garden Japanese Restaurant</Title>
+            <Address>3349 Monroe Ave</Address>
+            <City>Rochester</City>
+            <State>NY</State>
+            <Phone>(585) 381-8730</Phone>
+            <Latitude>43.102132</Latitude>
+            <Longitude>-77.540131</Longitude>
+            <Rating>
+                <AverageRating>4</AverageRating>
+                <TotalRatings>11</TotalRatings>
+                <TotalReviews>11</TotalReviews>
+                <LastReviewDate>1339895461</LastReviewDate>
+                <LastReviewIntro> I have eaten at many a Japanese steakhouse in several states. This is not only the worst; multiple things about it were the worst. Wine from absolute hell (undrinkable). Soggy fried rice (hard to completely ruin rice in the microwave age, but they managed; it was soggy before it hit the grill). Bad broccoli. Bad, tasteless sauce--both of them. So bad, in fact, that although I never have been motivated to complain about a restaurant online before, this one motivated me to do so multiple times. Unimaginable why it s packed and popular. Customers must be hard up for entertainment and ignore food for the performance.</LastReviewIntro>
+            </Rating>
+            <Distance>5.32</Distance>
+            <Url>http://local.yahoo.com/info-11775468-plum-garden-japanese-restaurant-rochester</Url>
+            <ClickUrl>http://local.yahoo.com/info-11775468-plum-garden-japanese-restaurant-rochester</ClickUrl>
+            <MapUrl>http://local.yahoo.com/info-11775468-plum-garden-japanese-restaurant-rochester?viewtype=map</MapUrl>
+            <BusinessUrl/>
+            <BusinessClickUrl/>
+            <Categories>
+                <Category id="96926210">Japanese Restaurants</Category>
+                <Category id="96926236">Restaurants</Category>
+            </Categories>
+        </Result>
+        <Result id="11762112">
+            <Title>California Rollin' Sushi Bar</Title>
+            <Address>274 Goodman St N</Address>
+            <City>Rochester</City>
+            <State>NY</State>
+            <Phone>(585) 271-8990</Phone>
+            <Latitude>43.158685</Latitude>
+            <Longitude>-77.585197</Longitude>
+            <Rating>
+                <AverageRating>3</AverageRating>
+                <TotalRatings>10</TotalRatings>
+                <TotalReviews>10</TotalReviews>
+                <LastReviewDate>1341259499</LastReviewDate>
+                <LastReviewIntro> I went with my two girls last week and was told it would be around 1-1/2 wait so we had our name put on list hoping we would get seated sooner. It was busy because the groupons were expiring (which they knew ahead of time, so one would think they would be prepared). Well needless to say after 1-1/2 we still were not seated and there were several tables available. I asked how much longer and the hostess said another hour. I told her we have already been waiting for 1 hour she smirked and said sorry. People were coming in after us and being seated which made one of my girls ask the question why do they get a table before us. I went back in and said since my kids are tired is there anyway I could order take out and use my groupon since I am here and of course the hostess replied no its for dine in only. Ugh we left and ate elsewhere. I did call to speak with the manager who really was more concerned about telling me how proud she was of her staff and really didnt seem to care about our awful experience. Too bad because they lost several customers that night. What ever happend to customer service?</LastReviewIntro>
+            </Rating>
+            <Distance>1.57</Distance>
+            <Url>http://local.yahoo.com/info-11762112-california-rollin-sushi-bar-rochester</Url>
+            <ClickUrl>http://local.yahoo.com/info-11762112-california-rollin-sushi-bar-rochester</ClickUrl>
+            <MapUrl>http://local.yahoo.com/info-11762112-california-rollin-sushi-bar-rochester?viewtype=map</MapUrl>
+            <BusinessUrl>http://californiarollin.com/</BusinessUrl>
+            <BusinessClickUrl>http://californiarollin.com/</BusinessClickUrl>
+            <Categories>
+                <Category id="96926236">Restaurants</Category>
+                <Category id="96926205">Sushi Restaurants</Category>
+            </Categories>
+        </Result>
+        <Result id="102884720">
+            <Title>Osaka Sushi</Title>
+            <Address>3240 Chili Ave, #13</Address>
+            <City>Rochester</City>
+            <State>NY</State>
+            <Phone>(585) 571-4744</Phone>
+            <Latitude>43.104066</Latitude>
+            <Longitude>-77.752747</Longitude>
+            <Rating>
+                <AverageRating>NaN</AverageRating>
+                <TotalRatings>0</TotalRatings>
+                <TotalReviews>0</TotalReviews>
+                <LastReviewDate/>
+                <LastReviewIntro/>
+            </Rating>
+            <Distance>7.76</Distance>
+            <Url>http://local.yahoo.com/info-102884720-osaka-sushi-rochester</Url>
+            <ClickUrl>http://local.yahoo.com/info-102884720-osaka-sushi-rochester</ClickUrl>
+            <MapUrl>http://local.yahoo.com/info-102884720-osaka-sushi-rochester?viewtype=map</MapUrl>
+            <BusinessUrl/>
+            <BusinessClickUrl/>
+            <Categories>
+                <Category id="96926236">Restaurants</Category>
+                <Category id="96926164">Chinese Restaurants</Category>
+            </Categories>
+        </Result>
+        <Result id="92436599">
+            <Title>Hibatchi Sushi Buffet</Title>
+            <Address>3333 W Henrietta Rd, #420</Address>
+            <City>Rochester</City>
+            <State>NY</State>
+            <Phone>(585) 272-9988</Phone>
+            <Latitude>43.086637</Latitude>
+            <Longitude>-77.637253</Longitude>
+            <Rating>
+                <AverageRating>NaN</AverageRating>
+                <TotalRatings>0</TotalRatings>
+                <TotalReviews>0</TotalReviews>
+                <LastReviewDate/>
+                <LastReviewIntro/>
+            </Rating>
+            <Distance>4.88</Distance>
+            <Url>http://local.yahoo.com/info-92436599-hibatchi-sushi-buffet-rochester</Url>
+            <ClickUrl>http://local.yahoo.com/info-92436599-hibatchi-sushi-buffet-rochester</ClickUrl>
+            <MapUrl>http://local.yahoo.com/info-92436599-hibatchi-sushi-buffet-rochester?viewtype=map</MapUrl>
+            <BusinessUrl/>
+            <BusinessClickUrl/>
+            <Categories>
+                <Category id="96926236">Restaurants</Category>
+                <Category id="96926164">Chinese Restaurants</Category>
+            </Categories>
+        </Result>
+    </results>
+</query>
+ 
