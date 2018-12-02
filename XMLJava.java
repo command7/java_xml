@@ -23,7 +23,6 @@ public class XMLJava extends DefaultHandler{
 
    public void startElement(String namespace,String localName, String sElement, Attributes attrList ) {
       currentTag = sElement;
-      //System.out.println(sElement);
       if (sElement.equals("Result")) {
          resultsStart = true;
          result = new Results();      
@@ -36,7 +35,66 @@ public class XMLJava extends DefaultHandler{
          if(content.trim().length() > 0) {
             result.setTitle(content);
          }
-//          result.setTitle(content);
+      }
+      if (currentTag.equals("Address")) {
+         if(content.trim().length() > 0) {
+            result.setAddress(content);
+         }
+      }
+      if (currentTag.equals("City")) {
+         if(content.trim().length() > 0) {
+            result.setCity(content);
+         }
+      }
+      if (currentTag.equals("State")) {
+         if(content.trim().length() > 0) {
+            result.setState(content);
+         }
+      }
+      if (currentTag.equals("Phone")) {
+         if(content.trim().length() > 0) {
+            result.setPhone(content);
+         }
+      }
+      if (currentTag.equals("Latitude")) {
+         if(content.trim().length() > 0) {
+            result.setLatitude(content);
+         }
+      }
+      if (currentTag.equals("Longitude")) {
+         if(content.trim().length() > 0) {
+         result.setLongitude(content);
+         }
+      }
+      if (currentTag.equals("Distance")) {
+         if(content.trim().length() > 0) {
+            result.setDistance(content);
+         }
+      }
+      if (currentTag.equals("Url")) {
+         if(content.trim().length() > 0) {
+            result.setUrl(content);
+         }
+      }
+      if (currentTag.equals("ClickUrl")) {
+         if(content.trim().length() > 0) {
+            result.setClickUrl(content);
+         }
+      }
+      if (currentTag.equals("MapUrl")) {
+         if(content.trim().length() > 0) {
+            result.setMapUrl(content);
+         }
+      }
+      if (currentTag.equals("BusinessUrl")) {
+         if(content.trim().length() > 0) {
+            result.setBusinessUrl(content);
+         }
+      }
+      if (currentTag.equals("BusinessClickUrl")) {
+         if(content.trim().length() > 0) {
+            result.setBusinessClickUrl(content);
+         }
       }
    }
 
