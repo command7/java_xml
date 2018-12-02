@@ -31,14 +31,12 @@ public class XMLJava extends DefaultHandler{
    }
    
    public void characters(char[] text, int start, int len) {
-      String content = new String(text, start, len );
-      content.replace("\n", " ");
-      content.replace(" ", "");
-      content = content.trim();    
+      String content = new String(text, start, len );    
       if (currentTag.equals("Title")) {
-         System.out.println(content);
-         result.setTitle(content);
-         resultCollection.add(result);
+         if(content.trim().length() > 0) {
+            result.setTitle(content);
+         }
+//          result.setTitle(content);
       }
    }
 
@@ -46,7 +44,7 @@ public class XMLJava extends DefaultHandler{
       //System.out.println(eElement);
       if (eElement.equals("Result")) {
          resultsStart = false;
-         System.out.println(result);
+         resultCollection.add(result);
       }
    }
 
@@ -60,7 +58,7 @@ public class XMLJava extends DefaultHandler{
    
          FileReader reader = new FileReader("RochesterSushi.xml");
          xr.parse(new InputSource(reader));
-//          handler.testWorking();
+         handler.testWorking();
       }
       catch (SAXException e) {
 	      e.printStackTrace();
