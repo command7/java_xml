@@ -144,7 +144,7 @@ public class Results {
       return this.categories;
    }
    public String toString() {
-      return this.title;
+      return "";
    }
 
 }

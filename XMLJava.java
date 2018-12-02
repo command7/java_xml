@@ -2,15 +2,57 @@ import org.xml.sax.*;
 import org.xml.sax.helpers.*;
 import java.io.*;
 import java.util.*;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
 
-public class XMLJava extends DefaultHandler{
+
+public class XMLJava extends DefaultHandler implements ActionListener{
    
+   private JFrame mainFrame = new JFrame();
    private boolean resultsStart = false;
-   private List resultCollection = Collections.synchronizedList(new ArrayList());
+   private java.util.List resultCollection = Collections.synchronizedList(new ArrayList());
    private Results result;
    private Ratings rating;
    private Categories category;
+   private Vector rowData = new Vector();
+   private Vector indivRow;
+   private Vector columnData = new Vector();
    private String currentTag;
+   
+   public XMLJava() {
+   
+      readData();
+      storeJtableFormat();
+      createGUI();
+   }
+   
+   public void readData() {
+      try {
+         XMLReader xr = XMLReaderFactory.createXMLReader();
+         xr.setContentHandler(this);
+         xr.setErrorHandler(this);
+   
+         FileReader reader = new FileReader("RochesterSushi.xml");
+         xr.parse(new InputSource(reader));
+         this.testWorking();
+      }
+      catch(Exception e) {}
+   }
+   
+   public void storeJtableFormat() {
+      for (int i = 0; i < resultCollection.size(); i++) {
+         Results resultItem = (Results)resultCollection.get(i);
+         indivRow = new Vector();
+         indivRow.addElement(resultItem.getTitle());
+         indivRow.addElement(resultItem.getAddress());
+         indivRow.addElement(resultItem.getPhone());
+         rowData.addElement(indivRow);
+      }
+      columnData.addElement("Title");
+      columnData.addElement("Address");
+      columnData.addElement("Phone"); 
+   }  
    
    public void testWorking() {
       for (int i = 0; i < resultCollection.size(); i++) {
@@ -18,8 +60,24 @@ public class XMLJava extends DefaultHandler{
          System.out.println(resultItem.getTitle());
       }
    }
-
-   public void setResults() {
+   
+   public void createGUI() {
+      mainFrame.setLayout(new BorderLayout());
+      
+      JComboBox xmlSelection = new JComboBox();
+      xmlSelection.addItem("Rochester Sushi");
+      xmlSelection.addItem("San Francisco Sushi");
+      xmlSelection.addActionListener(this);
+      mainFrame.add(xmlSelection, BorderLayout.NORTH);
+      
+      JTable xmlDetails = new JTable(rowData, columnData);
+      xmlDetails.setGridColor(Color.BLUE);
+      mainFrame.add(new JScrollPane(xmlDetails), BorderLayout.CENTER);
+      
+      mainFrame.setSize(500,400);
+      mainFrame.setVisible(true);
+      mainFrame.setLocationRelativeTo(null);
+      mainFrame.setDefaultCloseOperation(mainFrame.EXIT_ON_CLOSE); 
    }
 
    public void startElement(String namespace,String localName, String sElement, Attributes attrList ) {
@@ -136,7 +194,6 @@ public class XMLJava extends DefaultHandler{
    }
 
    public void endElement(String namespace,String localName, String eElement) {
-      //System.out.println(eElement);
       if (eElement.equals("Result")) {
          resultsStart = false;
          resultCollection.add(result);
@@ -151,21 +208,9 @@ public class XMLJava extends DefaultHandler{
 
    
    public static void main(String [] args) {
-      try {
-         XMLJava handler = new XMLJava();
-         XMLReader xr = XMLReaderFactory.createXMLReader();
-         xr.setContentHandler(handler);
-         xr.setErrorHandler(handler);
+      XMLJava handler = new XMLJava();
+   }
    
-         FileReader reader = new FileReader("RochesterSushi.xml");
-         xr.parse(new InputSource(reader));
-         handler.testWorking();
-      }
-      catch (SAXException e) {
-	      e.printStackTrace();
-	   }
-	   catch (IOException e) {
-	      e.printStackTrace();
-	   } 
+   public void actionPerformed(ActionEvent e) {
    }
 }
