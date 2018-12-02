@@ -10,37 +10,41 @@ import java.awt.event.*;
 public class XMLJava extends DefaultHandler implements ActionListener{
    
    private JFrame mainFrame = new JFrame();
+   private JComboBox xmlSelection;
+   private JTable xmlDetails;
    private boolean resultsStart = false;
    private java.util.List resultCollection = Collections.synchronizedList(new ArrayList());
    private Results result;
    private Ratings rating;
    private Categories category;
-   private Vector rowData = new Vector();
+   private Vector rowData;
    private Vector indivRow;
-   private Vector columnData = new Vector();
+   private Vector columnData;
    private String currentTag;
+   private String filename = "RochesterSushi.xml";
    
    public XMLJava() {
-   
-      readData();
-      storeJtableFormat();
+      // readData(filename);
+//       storeJtableFormat();
       createGUI();
    }
    
-   public void readData() {
+   public void readData(String filename) {
       try {
          XMLReader xr = XMLReaderFactory.createXMLReader();
          xr.setContentHandler(this);
          xr.setErrorHandler(this);
    
-         FileReader reader = new FileReader("RochesterSushi.xml");
+         FileReader reader = new FileReader(filename);
          xr.parse(new InputSource(reader));
-         //this.testWorking();
+         this.testWorking();
       }
       catch(Exception e) {}
    }
    
    public void storeJtableFormat() {
+      rowData = new Vector();
+      columnData = new Vector();
       for (int i = 0; i < resultCollection.size(); i++) {
          Results resultItem = (Results)resultCollection.get(i);
          indivRow = new Vector();
@@ -67,16 +71,42 @@ public class XMLJava extends DefaultHandler implements ActionListener{
       }
    }
    
+   public void loadTable() {
+      String selection = xmlSelection.getSelectedItem().toString();
+      System.out.println(selection);
+      switch(selection) {
+         case "Rochester Sushi":
+            filename = "RochesterSushi.xml";
+            readData(filename);
+            storeJtableFormat();
+            updateJtable();
+         case "San Francisco Sushi":
+            filename="SanFranciscoSushi.xml";
+            readData(filename);
+            storeJtableFormat();
+            updateJtable();
+      }
+   }
+   
+   public void updateJtable() {
+      xmlDetails = new JTable(0,0);
+      xmlDetails = new JTable(rowData, columnData);
+      xmlDetails.setGridColor(Color.BLUE);
+      mainFrame.add(new JScrollPane(xmlDetails), BorderLayout.CENTER);
+      mainFrame.revalidate();
+   }
+   
    public void createGUI() {
       mainFrame.setLayout(new BorderLayout());
       
-      JComboBox xmlSelection = new JComboBox();
+      xmlSelection = new JComboBox();
+      xmlSelection.addItem(" ");
       xmlSelection.addItem("Rochester Sushi");
       xmlSelection.addItem("San Francisco Sushi");
       xmlSelection.addActionListener(this);
       mainFrame.add(xmlSelection, BorderLayout.NORTH);
       
-      JTable xmlDetails = new JTable(rowData, columnData);
+      xmlDetails = new JTable(rowData, columnData);
       xmlDetails.setGridColor(Color.BLUE);
       mainFrame.add(new JScrollPane(xmlDetails), BorderLayout.CENTER);
       
@@ -218,5 +248,8 @@ public class XMLJava extends DefaultHandler implements ActionListener{
    }
    
    public void actionPerformed(ActionEvent e) {
+      if(e.getSource() == xmlSelection) {
+         loadTable();
+      }
    }
 }
