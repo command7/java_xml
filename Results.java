@@ -127,5 +127,9 @@ public class Results {
    public String getBusinessClickUrl() {
       return this.businessClickUrl;
    }
+   
+   public String toString() {
+      return this.title;
+   }
 
 }
