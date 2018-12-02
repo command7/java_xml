@@ -35,7 +35,7 @@ public class XMLJava extends DefaultHandler implements ActionListener{
    
          FileReader reader = new FileReader("RochesterSushi.xml");
          xr.parse(new InputSource(reader));
-         this.testWorking();
+         //this.testWorking();
       }
       catch(Exception e) {}
    }
@@ -47,11 +47,17 @@ public class XMLJava extends DefaultHandler implements ActionListener{
          indivRow.addElement(resultItem.getTitle());
          indivRow.addElement(resultItem.getAddress());
          indivRow.addElement(resultItem.getPhone());
+         indivRow.addElement(resultItem.getRating().getAverageRating());
+         indivRow.addElement(resultItem.getRating().getTotalRating());
+         indivRow.addElement(resultItem.getRating().getLastReviewDate());
          rowData.addElement(indivRow);
       }
       columnData.addElement("Title");
       columnData.addElement("Address");
-      columnData.addElement("Phone"); 
+      columnData.addElement("Phone");
+      columnData.addElement("Average Rating");
+      columnData.addElement("Total Ratings");
+      columnData.addElement("Last Review Date"); 
    }  
    
    public void testWorking() {
@@ -74,7 +80,7 @@ public class XMLJava extends DefaultHandler implements ActionListener{
       xmlDetails.setGridColor(Color.BLUE);
       mainFrame.add(new JScrollPane(xmlDetails), BorderLayout.CENTER);
       
-      mainFrame.setSize(500,400);
+      mainFrame.setSize(1500,900);
       mainFrame.setVisible(true);
       mainFrame.setLocationRelativeTo(null);
       mainFrame.setDefaultCloseOperation(mainFrame.EXIT_ON_CLOSE); 
