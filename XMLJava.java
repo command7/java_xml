@@ -6,7 +6,7 @@ import javax.swing.*;
 import javax.swing.table.*;
 import java.awt.*;
 import java.awt.event.*;
-
+import javax.xml.stream.*;
 
 public class XMLJava extends DefaultHandler implements ActionListener{
    
@@ -43,8 +43,45 @@ public class XMLJava extends DefaultHandler implements ActionListener{
    }
    
    public void writeData(String _filename) {
-      String outputName = _filename.split(".")[0] + "_out.xml";
+      String outputName = _filename.split("\\.")[0] + "_out.xml";
       System.out.println(outputName);
+      try {
+         OutputStream os = new FileOutputStream(new File(outputName));
+   		XMLStreamWriter xsw = XMLOutputFactory.newInstance().createXMLStreamWriter(
+   								new OutputStreamWriter(new FileOutputStream(new File(outputName))));
+         xsw.writeStartDocument();
+         xsw.writeStartElement("results");
+         for(int i = 0; i < resultCollection.size(); i++) {
+            Results resultItem = (Results)resultCollection.get(i);
+            xsw.writeStartElement("Result");
+               xsw.writeStartElement("Title");
+                  xsw.writeCharacters(resultItem.getTitle());
+               xsw.writeEndElement();
+               xsw.writeStartElement("Address");
+                  xsw.writeCharacters(resultItem.getAddress());
+               xsw.writeEndElement();
+               xsw.writeStartElement("Phone");
+                  xsw.writeCharacters(resultItem.getPhone());
+               xsw.writeEndElement();
+               xsw.writeStartElement("Rating");
+                  xsw.writeStartElement("AverageRating");
+                     xsw.writeCharacters(resultItem.getRating().getAverageRating());
+                  xsw.writeEndElement();
+                  xsw.writeStartElement("TotalRatings");
+                     xsw.writeCharacters(resultItem.getRating().getTotalRating());
+                  xsw.writeEndElement();
+                  xsw.writeStartElement("LastReviewDate");
+                     xsw.writeCharacters(resultItem.getRating().getLastReviewDate());
+                  xsw.writeEndElement();
+               xsw.writeEndElement();
+            xsw.writeEndElement();         
+         }
+         xsw.writeEndElement();
+         xsw.writeEndDocument();
+         xsw.flush();
+         xsw.close();
+      }
+      catch (Exception e) {}
    }
    
    public void storeJtableFormat() {
@@ -78,18 +115,23 @@ public class XMLJava extends DefaultHandler implements ActionListener{
    
    public void loadTable() {
       String selection = xmlSelection.getSelectedItem().toString();
-      System.out.println(selection);
       switch(selection) {
          case "Rochester Sushi":
+            System.out.println("RS");
             filename = "RochesterSushi.xml";
             readData(filename);
             storeJtableFormat();
             updateJtable();
+            writeData(filename);
+            break;
          case "San Francisco Sushi":
+            System.out.println("SS");
             filename="SanFranciscoSushi.xml";
             readData(filename);
             storeJtableFormat();
             updateJtable();
+            writeData(filename);
+            break;
       }
    }
    
