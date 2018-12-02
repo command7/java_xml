@@ -67,56 +67,56 @@ public class Results {
       this.businessClickUrl = _bClickUrl;
    }
    
-   public void getTitle(String _title) {
-      this.title = _title;
+   public String getTitle() {
+      return this.title;
    }
    
-   public void getAddress(String _address) {
-      this.address = _address;
+   public String getAddress() {
+      return this.address;
    }
    
-   public void getCity(String _city) {
-      this.city = _city;
+   public String getCity() {
+      return this.city;
    }
    
-   public void getState(String _state) {
-      this.state = _state;
+   public String getState() {
+      return this.state;
    }
    
-   public void getPhone(String _phone) {
-      this.phone = _phone;
+   public String getPhone() {
+      return this.phone;
    }
    
-   public void getLatitude(double _lat) {
-      this.latitude = _lat;
+   public double getLatitude() {
+      return this.latitude;
    }
    
-   public void getLongitude(double _longitude) {
-      this.longitude = _longitude;
+   public double getLongitude() {
+      return this.longitude;
    }
    
-   public void getDistance(double _distance) {
-      this.distance = _distance;
+   public double getDistance() {
+      return this.distance;
    }
    
-   public void getUrl(String _url) {
-      this.url = _url;
+   public String getUrl() {
+      return this.url;
    }
    
-   public void getClickUrl(String _clickUrl) {
-      this.clickUrl = _clickUrl;
+   public String getClickUrl(String _clickUrl) {
+      return this.clickUrl;
    }
    
-   public void getMapUrl(String _mapUrl) {
-      this.mapUrl = _mapUrl;
+   public String getMapUrl() {
+      return this.mapUrl;
    }
    
-   public void getBusinessUrl(String _busiUrl) {
-      this.businessUrl = _busiUrl;
+   public String getBusinessUrl() {
+      return this.businessUrl;
    }
    
-   public void getBusinessClickUrl(String _bClickUrl) {
-      this.businessClickUrl = _bClickUrl;
+   public String getBusinessClickUrl() {
+      return this.businessClickUrl;
    }
 
 }
