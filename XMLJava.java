@@ -94,15 +94,9 @@ public class XMLJava extends DefaultHandler implements ActionListener{
    }
    
    public void updateJtable() {
-      model = (DefaultTableModel)xmlDetails.getModel();
-      model.setDataVector(rowData, columnData);
-      model.fireTableDataChanged();
-    //   model = new DefaultTableModel(rowData, columnData);
-//       xmlDetails.setModel(model);
-      // xmlDetails.setGridColor(Color.BLUE);
-//       tableContainer = new JScrollPane(xmlDetails);
-//       mainFrame.add(BorderLayout.CENTER, tableContainer);
- mainFrame.revalidate();
+      model = new DefaultTableModel(rowData, columnData);
+      xmlDetails.setModel(model);
+      mainFrame.revalidate();
    }
    
    public void createGUI() {
