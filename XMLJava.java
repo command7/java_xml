@@ -8,6 +8,7 @@ public class XMLJava extends DefaultHandler{
    private boolean resultsStart = false;
    private List resultCollection = Collections.synchronizedList(new ArrayList());
    private Results result;
+   private Ratings rating;
    private Vector title;
    private String currentTag;
    
@@ -26,6 +27,10 @@ public class XMLJava extends DefaultHandler{
       if (sElement.equals("Result")) {
          resultsStart = true;
          result = new Results();      
+      }
+      if (sElement.equals("Rating")) {
+         resultsStart = true;
+         rating = new Ratings();      
       }
    }
    
@@ -71,6 +76,31 @@ public class XMLJava extends DefaultHandler{
             result.setDistance(content);
          }
       }
+      if (currentTag.equals("AverageRating")) {
+         if(content.trim().length() > 0) {
+            rating.setAverageRating(content);
+         }
+      }
+      if (currentTag.equals("TotalRatings")) {
+         if(content.trim().length() > 0) {
+            result.setTotalRatings(content);
+         }
+      }
+      if (currentTag.equals("TotalReviews")) {
+         if(content.trim().length() > 0) {
+            result.setTotalReviews(content);
+         }
+      }
+      if (currentTag.equals("LastReviewDate")) {
+         if(content.trim().length() > 0) {
+            result.setLastReviewDate(content);
+         }
+      }
+      if (currentTag.equals("LastReviewIntro")) {
+         if(content.trim().length() > 0) {
+            result.setLastReviewIntro(content);
+         }
+      }
       if (currentTag.equals("Url")) {
          if(content.trim().length() > 0) {
             result.setUrl(content);
@@ -103,6 +133,9 @@ public class XMLJava extends DefaultHandler{
       if (eElement.equals("Result")) {
          resultsStart = false;
          resultCollection.add(result);
+      }
+      if (eElement.equals("Rating")) {
+         result.setRating(rating);
       }
    }
 

@@ -1,24 +1,24 @@
 public class Ratings
 {
-   private double averageRating;
-   private int totalRating;
-   private int totalReviews;
-   private int lastReviewDate;
+   private String averageRating;
+   private String totalRating;
+   private String totalReviews;
+   private String lastReviewDate;
    private String lastReviewIntro;
    
-   public double getAverageRating() {
+   public String getAverageRating() {
       return this.averageRating;
    }
    
-   public int getTotalRating() {
+   public String getTotalRating() {
       return this.totalRating;
    }
    
-   public int getTotalReviews() {
+   public String getTotalReviews() {
       return this.totalReviews;
    }
    
-   public int getLastReviewDate() {
+   public String getLastReviewDate() {
       return this.lastReviewDate;
    }
    
@@ -26,19 +26,19 @@ public class Ratings
       return this.lastReviewIntro;
    }
    
-   public void setAverageRating(double _averageRating) {
+   public void setAverageRating(String _averageRating) {
       this.averageRating = _averageRating;
    }
    
-   public void setTotalRating(int _totalRating) {
+   public void setTotalRating(String _totalRating) {
       this.totalRating = _totalRating;
    }
    
-   public void setTotalReviews(int _totalReviews) {
+   public void setTotalReviews(String _totalReviews) {
       this.totalReviews = _totalReviews;
    }
    
-   public void setLastReviewDate(int _lastReviewDate) {
+   public void setLastReviewDate(String _lastReviewDate) {
       this.lastReviewDate = _lastReviewDate;
    }
    

@@ -5,10 +5,10 @@ public class Results {
    private String city;
    private String state;
    private String phone;
-   private double latitude;
-   private double longitude;
+   private String latitude;
+   private String longitude;
    private Ratings rating;
-   private double distance;
+   private String distance;
    private String url;
    private String clickUrl;
    private String mapUrl;
@@ -40,15 +40,15 @@ public class Results {
       this.phone = _phone;
    }
    
-   public void setLatitude(double _lat) {
+   public void setLatitude(String _lat) {
       this.latitude = _lat;
    }
    
-   public void setLongitude(double _longitude) {
+   public void setLongitude(String _longitude) {
       this.longitude = _longitude;
    }
    
-   public void setDistance(double _distance) {
+   public void setDistance(String _distance) {
       this.distance = _distance;
    }
    
@@ -70,6 +70,10 @@ public class Results {
    
    public void setBusinessClickUrl(String _bClickUrl) {
       this.businessClickUrl = _bClickUrl;
+   }
+   
+   public void setRating(Ratings _rating) {
+      this.rating = _rating;
    }
    
    public String getId() {
@@ -96,15 +100,15 @@ public class Results {
       return this.phone;
    }
    
-   public double getLatitude() {
+   public String getLatitude() {
       return this.latitude;
    }
    
-   public double getLongitude() {
+   public String getLongitude() {
       return this.longitude;
    }
    
-   public double getDistance() {
+   public String getDistance() {
       return this.distance;
    }
    
@@ -126,6 +130,10 @@ public class Results {
    
    public String getBusinessClickUrl() {
       return this.businessClickUrl;
+   }
+   
+   public Ratings getRating() {
+      return this.rating;
    }
    
    public String toString() {
