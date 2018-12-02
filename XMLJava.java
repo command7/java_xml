@@ -3,6 +3,7 @@ import org.xml.sax.helpers.*;
 import java.io.*;
 import java.util.*;
 import javax.swing.*;
+import javax.swing.table.*;
 import java.awt.*;
 import java.awt.event.*;
 
@@ -12,6 +13,8 @@ public class XMLJava extends DefaultHandler implements ActionListener{
    private JFrame mainFrame = new JFrame();
    private JComboBox xmlSelection;
    private JTable xmlDetails;
+   private JScrollPane tableContainer;
+   private DefaultTableModel model;
    private boolean resultsStart = false;
    private java.util.List resultCollection = Collections.synchronizedList(new ArrayList());
    private Results result;
@@ -24,8 +27,6 @@ public class XMLJava extends DefaultHandler implements ActionListener{
    private String filename = "RochesterSushi.xml";
    
    public XMLJava() {
-      // readData(filename);
-//       storeJtableFormat();
       createGUI();
    }
    
@@ -37,9 +38,13 @@ public class XMLJava extends DefaultHandler implements ActionListener{
    
          FileReader reader = new FileReader(filename);
          xr.parse(new InputSource(reader));
-         this.testWorking();
       }
       catch(Exception e) {}
+   }
+   
+   public void writeData(String _filename) {
+      String outputName = _filename.split(".")[0] + "_out.xml";
+      System.out.println(outputName);
    }
    
    public void storeJtableFormat() {
@@ -89,11 +94,15 @@ public class XMLJava extends DefaultHandler implements ActionListener{
    }
    
    public void updateJtable() {
-      xmlDetails = new JTable(0,0);
-      xmlDetails = new JTable(rowData, columnData);
-      xmlDetails.setGridColor(Color.BLUE);
-      mainFrame.add(new JScrollPane(xmlDetails), BorderLayout.CENTER);
-      mainFrame.revalidate();
+      model = (DefaultTableModel)xmlDetails.getModel();
+      model.setDataVector(rowData, columnData);
+      model.fireTableDataChanged();
+    //   model = new DefaultTableModel(rowData, columnData);
+//       xmlDetails.setModel(model);
+      // xmlDetails.setGridColor(Color.BLUE);
+//       tableContainer = new JScrollPane(xmlDetails);
+//       mainFrame.add(BorderLayout.CENTER, tableContainer);
+ mainFrame.revalidate();
    }
    
    public void createGUI() {
@@ -106,9 +115,11 @@ public class XMLJava extends DefaultHandler implements ActionListener{
       xmlSelection.addActionListener(this);
       mainFrame.add(xmlSelection, BorderLayout.NORTH);
       
-      xmlDetails = new JTable(rowData, columnData);
+      model = new DefaultTableModel(rowData, columnData);
+      xmlDetails = new JTable(model);
       xmlDetails.setGridColor(Color.BLUE);
-      mainFrame.add(new JScrollPane(xmlDetails), BorderLayout.CENTER);
+      tableContainer = new JScrollPane(xmlDetails);
+      mainFrame.add(tableContainer, BorderLayout.CENTER);
       
       mainFrame.setSize(1500,900);
       mainFrame.setVisible(true);
