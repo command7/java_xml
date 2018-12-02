@@ -9,7 +9,7 @@ public class XMLJava extends DefaultHandler{
    private List resultCollection = Collections.synchronizedList(new ArrayList());
    private Results result;
    private Ratings rating;
-   private Vector title;
+   private Categories category;
    private String currentTag;
    
    public void testWorking() {
@@ -29,8 +29,10 @@ public class XMLJava extends DefaultHandler{
          result = new Results();      
       }
       if (sElement.equals("Rating")) {
-         resultsStart = true;
          rating = new Ratings();      
+      }
+      if (sElement.equals("Categories")) {
+         category = new Categories();      
       }
    }
    
@@ -83,22 +85,22 @@ public class XMLJava extends DefaultHandler{
       }
       if (currentTag.equals("TotalRatings")) {
          if(content.trim().length() > 0) {
-            result.setTotalRatings(content);
+            rating.setTotalRating(content);
          }
       }
       if (currentTag.equals("TotalReviews")) {
          if(content.trim().length() > 0) {
-            result.setTotalReviews(content);
+            rating.setTotalReviews(content);
          }
       }
       if (currentTag.equals("LastReviewDate")) {
          if(content.trim().length() > 0) {
-            result.setLastReviewDate(content);
+            rating.setLastReviewDate(content);
          }
       }
       if (currentTag.equals("LastReviewIntro")) {
          if(content.trim().length() > 0) {
-            result.setLastReviewIntro(content);
+            rating.setLastReviewIntro(content);
          }
       }
       if (currentTag.equals("Url")) {
@@ -126,6 +128,11 @@ public class XMLJava extends DefaultHandler{
             result.setBusinessClickUrl(content);
          }
       }
+      if (currentTag.equals("Category")) {
+         if(content.trim().length() > 0) {
+            category.addCategories(content);
+         }
+      }
    }
 
    public void endElement(String namespace,String localName, String eElement) {
@@ -136,6 +143,9 @@ public class XMLJava extends DefaultHandler{
       }
       if (eElement.equals("Rating")) {
          result.setRating(rating);
+      }
+      if (eElement.equals("Categories")) {
+         result.setCategories(category);
       }
    }
 

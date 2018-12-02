@@ -76,6 +76,10 @@ public class Results {
       this.rating = _rating;
    }
    
+   public void setCategories(Categories _category) {
+      this.categories = _category;
+   }
+   
    public String getId() {
       return this.id;
    }
@@ -136,6 +140,9 @@ public class Results {
       return this.rating;
    }
    
+   public Categories getCategories() {
+      return this.categories;
+   }
    public String toString() {
       return this.title;
    }
