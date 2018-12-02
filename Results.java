@@ -1,4 +1,5 @@
 public class Results {
+   private String id;
    private String title;
    private String address;
    private String city;
@@ -14,6 +15,10 @@ public class Results {
    private String businessUrl;
    private String businessClickUrl;
    private Categories categories;
+   
+   public void setId(String _id) {
+      this.id = _id;
+   }
    
    public void setTitle(String _title) {
       this.title = _title;
@@ -65,6 +70,10 @@ public class Results {
    
    public void setBusinessClickUrl(String _bClickUrl) {
       this.businessClickUrl = _bClickUrl;
+   }
+   
+   public String getId() {
+      return this.id;
    }
    
    public String getTitle() {
