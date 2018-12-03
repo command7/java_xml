@@ -44,7 +44,6 @@ public class XMLJava extends DefaultHandler implements ActionListener{
    
    public void writeData(String _filename) {
       String outputName = _filename.split("\\.")[0] + "_out.xml";
-      System.out.println(outputName);
       try {
          OutputStream os = new FileOutputStream(new File(outputName));
    		XMLStreamWriter xsw = XMLOutputFactory.newInstance().createXMLStreamWriter(
@@ -117,15 +116,13 @@ public class XMLJava extends DefaultHandler implements ActionListener{
       String selection = xmlSelection.getSelectedItem().toString();
       switch(selection) {
          case "Rochester Sushi":
-            System.out.println("RS");
             filename = "RochesterSushi.xml";
             readData(filename);
             storeJtableFormat();
-            updateJtable();
+            createGUI();//updateJtable();
             writeData(filename);
             break;
          case "San Francisco Sushi":
-            System.out.println("SS");
             filename="SanFranciscoSushi.xml";
             readData(filename);
             storeJtableFormat();
@@ -136,9 +133,13 @@ public class XMLJava extends DefaultHandler implements ActionListener{
    }
    
    public void updateJtable() {
-      model = new DefaultTableModel(rowData, columnData);
-      xmlDetails.setModel(model);
-      mainFrame.revalidate();
+      // DefaultTableModel tmodel = (DefaultTableModel)xmlDetails.getModel();
+//       tmodel.getDataVector().removeAllElements();
+//       tmodel.fireTableDataChanged();
+         //model.setRowCount(0);
+         model = new DefaultTableModel(rowData, columnData);
+         xmlDetails.setModel(model);
+         mainFrame.revalidate();
    }
    
    public void createGUI() {
