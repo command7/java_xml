@@ -44,10 +44,17 @@ public class XMLJava extends DefaultHandler implements ActionListener{
    /** Default fil */
    private String filename = "RochesterSushi.xml";
    
+/**
+*  Constructor creates the foundational Graphical User interface
+*/
    public XMLJava() {
       createGUI();
-   }
+   }//end of constructor
    
+/**
+*  Parses data from the XML file
+*  @param filename Name of XML file
+*/
    public void readData(String filename) {
       try {
          XMLReader xr = XMLReaderFactory.createXMLReader();
@@ -58,8 +65,12 @@ public class XMLJava extends DefaultHandler implements ActionListener{
          xr.parse(new InputSource(reader));
       }
       catch(Exception e) {}
-   }
+   }//end of readData()
    
+/**
+*  Writes XML data to output file
+*  @param _filename Name of file to which XML has to be written to
+*/
    public void writeData(String _filename) {
       String outputName = _filename.split("\\.")[0] + "_out.xml";
       try {
@@ -99,8 +110,11 @@ public class XMLJava extends DefaultHandler implements ActionListener{
          xsw.close();
       }
       catch (Exception e) {}
-   }
+   }//end of writeData()
    
+/**
+*  Stores parsed XML data into vector rows to display in JTable
+*/
    public void storeJtableFormat() {
       rowData = new Vector();
       columnData = new Vector();
@@ -121,15 +135,11 @@ public class XMLJava extends DefaultHandler implements ActionListener{
       columnData.addElement("Average Rating");
       columnData.addElement("Total Ratings");
       columnData.addElement("Last Review Date"); 
-   }  
+   }//end of storeJtableFormat()  
    
-   public void testWorking() {
-      for (int i = 0; i < resultCollection.size(); i++) {
-         Results resultItem = (Results)resultCollection.get(i);
-         System.out.println(resultItem.getTitle());
-      }
-   }
-   
+/**
+*  Read xml data, write it to a file and display it in JTable based on the XML file chosen
+*/
    public void loadTable() {
       String selection = xmlSelection.getSelectedItem().toString();
       switch(selection) {
@@ -148,8 +158,11 @@ public class XMLJava extends DefaultHandler implements ActionListener{
             writeData(filename);
             break;
       }
-   }
+   }//end of loadTable()
    
+/**
+*  Update data in JTable based on XML selection
+*/
    public void updateJtable() {
       // DefaultTableModel tmodel = (DefaultTableModel)xmlDetails.getModel();
 //       tmodel.getDataVector().removeAllElements();
@@ -158,8 +171,11 @@ public class XMLJava extends DefaultHandler implements ActionListener{
          model = new DefaultTableModel(rowData, columnData);
          xmlDetails.setModel(model);
          mainFrame.revalidate();
-   }
+   }//end of updateJtable()
    
+/**
+*  Creates foundational Graphical user interface with a blank JTable
+*/
    public void createGUI() {
       mainFrame.setLayout(new BorderLayout());
       
@@ -182,6 +198,13 @@ public class XMLJava extends DefaultHandler implements ActionListener{
       mainFrame.setDefaultCloseOperation(mainFrame.EXIT_ON_CLOSE); 
    }
 
+/**
+*  Invoked when a starting XML tag is parsed
+*  @param namespace The Namespace URI, or the empty string
+*  @param localName The local name (without prefix), or the empty string if Namespace processing is not being performed.
+*  @param sElement Qualified name
+*  @param attrList Attributes attached to the element
+*/
    public void startElement(String namespace,String localName, String sElement, Attributes attrList ) {
       currentTag = sElement;
       if (sElement.equals("Result")) {
@@ -193,8 +216,14 @@ public class XMLJava extends DefaultHandler implements ActionListener{
       if (sElement.equals("Categories")) {
          category = new Categories();      
       }
-   }
+   }//end of startElement()
    
+/**
+*  Invoked when content with starting and ending tags is parsed
+*  @param text The characters
+*  @param start Starting position of character array
+*  @param len Number of characters in the character array
+*/
    public void characters(char[] text, int start, int len) {
       String content = new String(text, start, len );    
       if (currentTag.equals("Title")) {
@@ -292,8 +321,14 @@ public class XMLJava extends DefaultHandler implements ActionListener{
             category.addCategories(content);
          }
       }
-   }
+   }//end of Characters()
 
+/**
+*  Invoked when an ending XML tag is parsed
+*  @param namespace The Namespace URI, or the empty string
+*  @param localName The local name (without prefix), or the empty string if Namespace processing is not being performed.
+*  @param eElement Qualified name
+*/
    public void endElement(String namespace,String localName, String eElement) {
       if (eElement.equals("Result")) {
          resultCollection.add(result);
@@ -304,16 +339,23 @@ public class XMLJava extends DefaultHandler implements ActionListener{
       if (eElement.equals("Categories")) {
          result.setCategories(category);
       }
-   }
+   }//end of endElement()
 
-   
+/**
+*  Initiates an instance of XMLJave
+*  @param args Command Line Arguments
+*/
    public static void main(String [] args) {
       XMLJava handler = new XMLJava();
-   }
+   }//end of main
    
+/**
+*  Event listener for GUI components
+*  @param e Event that is triggering an action
+*/
    public void actionPerformed(ActionEvent e) {
       if(e.getSource() == xmlSelection) {
          loadTable();
       }
-   }
+   }//end of actionPerformed()
 }
