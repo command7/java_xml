@@ -13,6 +13,8 @@ import javax.swing.table.*;
 import java.awt.*;
 import java.awt.event.*;
 import javax.xml.stream.*;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 
 public class XMLJava extends DefaultHandler implements ActionListener{
    /** Main container of all other GUI components */
@@ -141,6 +143,7 @@ public class XMLJava extends DefaultHandler implements ActionListener{
 *  Read xml data, write it to a file and display it in JTable based on the XML file chosen
 */
    public void loadTable() {
+      
       String selection = xmlSelection.getSelectedItem().toString();
       switch(selection) {
          case "Rochester Sushi":
@@ -166,7 +169,8 @@ public class XMLJava extends DefaultHandler implements ActionListener{
    public void updateJtable() {
       // DefaultTableModel tmodel = (DefaultTableModel)xmlDetails.getModel();
 //       tmodel.getDataVector().removeAllElements();
-//       tmodel.fireTableDataChanged();
+//          model.setRowCount(0);
+//          model.fireTableDataChanged();
          //model.setRowCount(0);
          model = new DefaultTableModel(rowData, columnData);
          xmlDetails.setModel(model);
@@ -283,7 +287,11 @@ public class XMLJava extends DefaultHandler implements ActionListener{
       }
       if (currentTag.equals("LastReviewDate")) {
          if(content.trim().length() > 0) {
-            rating.setLastReviewDate(content);
+            Long newDate = new Long(content);
+            Date d = new Date(newDate);
+            DateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");
+            String outDate = dateFormat.format(d);
+            rating.setLastReviewDate(outDate);
          }
       }
       if (currentTag.equals("LastReviewIntro")) {
