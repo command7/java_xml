@@ -1,3 +1,9 @@
+/**
+*  Purpose: This program parses through an xml file, gathers necessary data, writes it to a file
+*           and displays it in a graphical user interface.
+*  @author: Vijay Raj Saravanan Radhakrishnan
+*  Date: 2nd December, 2018
+*/
 import org.xml.sax.*;
 import org.xml.sax.helpers.*;
 import java.io.*;
@@ -9,21 +15,33 @@ import java.awt.event.*;
 import javax.xml.stream.*;
 
 public class XMLJava extends DefaultHandler implements ActionListener{
-   
+   /** Main container of all other GUI components */
    private JFrame mainFrame = new JFrame();
+   /** Combo box containing options of difference xml files */
    private JComboBox xmlSelection;
+   /** JTable that will display parsed details */
    private JTable xmlDetails;
+   /** Scrollpane to scroll through JTable */
    private JScrollPane tableContainer;
+   /** Table model for JTable */
    private DefaultTableModel model;
-   private boolean resultsStart = false;
+   /** Collection that stores blocks of Result from XML */
    private java.util.List resultCollection = Collections.synchronizedList(new ArrayList());
+   /** Object storing information of each Result block */
    private Results result;
+   /** Object storing information in Rating blocks */
    private Ratings rating;
+   /** Object storing information in Categories blocks */
    private Categories category;
+   /** Rows of information to be displayed in JTable */
    private Vector rowData;
+   /** Single row of information to be displayed in JTable */
    private Vector indivRow;
+   /** Column headers for Jtable */
    private Vector columnData;
+   /** Current XML tag that is being parsed */
    private String currentTag;
+   /** Default fil */
    private String filename = "RochesterSushi.xml";
    
    public XMLJava() {
@@ -119,7 +137,7 @@ public class XMLJava extends DefaultHandler implements ActionListener{
             filename = "RochesterSushi.xml";
             readData(filename);
             storeJtableFormat();
-            createGUI();//updateJtable();
+            updateJtable();
             writeData(filename);
             break;
          case "San Francisco Sushi":
@@ -167,7 +185,6 @@ public class XMLJava extends DefaultHandler implements ActionListener{
    public void startElement(String namespace,String localName, String sElement, Attributes attrList ) {
       currentTag = sElement;
       if (sElement.equals("Result")) {
-         resultsStart = true;
          result = new Results();      
       }
       if (sElement.equals("Rating")) {
@@ -279,7 +296,6 @@ public class XMLJava extends DefaultHandler implements ActionListener{
 
    public void endElement(String namespace,String localName, String eElement) {
       if (eElement.equals("Result")) {
-         resultsStart = false;
          resultCollection.add(result);
       }
       if (eElement.equals("Rating")) {
