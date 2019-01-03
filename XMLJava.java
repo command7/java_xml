@@ -26,7 +26,7 @@ public class XMLJava extends DefaultHandler implements ActionListener{
    /** Scrollpane to scroll through JTable */
    private JScrollPane tableContainer;
    /** Table model for JTable */
-   private DefaultTableModel model;
+   private DefaultTableModel model = new DefaultTableModel();
    /** Collection that stores blocks of Result from XML */
    private java.util.List resultCollection = Collections.synchronizedList(new ArrayList());
    /** Object storing information of each Result block */
@@ -35,15 +35,9 @@ public class XMLJava extends DefaultHandler implements ActionListener{
    private Ratings rating;
    /** Object storing information in Categories blocks */
    private Categories category;
-   /** Rows of information to be displayed in JTable */
-   private Vector rowData;
-   /** Single row of information to be displayed in JTable */
-   private Vector indivRow;
-   /** Column headers for Jtable */
-   private Vector columnData;
    /** Current XML tag that is being parsed */
    private String currentTag;
-   /** Default fil */
+   /** Default filename */
    private String filename = "RochesterSushi.xml";
    
 /**
@@ -114,72 +108,6 @@ public class XMLJava extends DefaultHandler implements ActionListener{
       catch (Exception e) {}
    }//end of writeData()
    
-/**
-*  Stores parsed XML data into vector rows to display in JTable
-*/
-   public void storeJtableFormat() {
-      rowData = new Vector();
-      columnData = new Vector();
-      for (int i = 0; i < resultCollection.size(); i++) {
-         Results resultItem = (Results)resultCollection.get(i);
-         indivRow = new Vector();
-         indivRow.addElement(resultItem.getTitle());
-         indivRow.addElement(resultItem.getAddress());
-         indivRow.addElement(resultItem.getPhone());
-         indivRow.addElement(resultItem.getRating().getAverageRating());
-         indivRow.addElement(resultItem.getRating().getTotalRating());
-         indivRow.addElement(resultItem.getRating().getLastReviewDate());
-         rowData.addElement(indivRow);
-      }
-      columnData.addElement("Title");
-      columnData.addElement("Address");
-      columnData.addElement("Phone");
-      columnData.addElement("Average Rating");
-      columnData.addElement("Total Ratings");
-      columnData.addElement("Last Review Date"); 
-   }//end of storeJtableFormat()  
-   
-/**
-*  Read xml data, write it to a file and display it in JTable based on the XML file chosen
-*/
-   public void loadTable() {
-      
-      String selection = xmlSelection.getSelectedItem().toString();
-      switch(selection) {
-         case "Rochester Sushi":
-            filename = "RochesterSushi.xml";
-            readData(filename);
-            storeJtableFormat();
-            updateJtable();
-            writeData(filename);
-            break;
-         case "San Francisco Sushi":
-            filename="SanFranciscoSushi.xml";
-            readData(filename);
-            storeJtableFormat();
-            updateJtable();
-            writeData(filename);
-            break;
-      }
-   }//end of loadTable()
-   
-/**
-*  Update data in JTable based on XML selection
-*/
-   public void updateJtable() {
-      // DefaultTableModel tmodel = (DefaultTableModel)xmlDetails.getModel();
-//       tmodel.getDataVector().removeAllElements();
-//          model.setRowCount(0);
-//          model.fireTableDataChanged();
-         //model.setRowCount(0);
-         model = new DefaultTableModel(rowData, columnData);
-         xmlDetails.setModel(model);
-         mainFrame.revalidate();
-   }//end of updateJtable()
-   
-/**
-*  Creates foundational Graphical user interface with a blank JTable
-*/
    public void createGUI() {
       mainFrame.setLayout(new BorderLayout());
       
@@ -190,7 +118,6 @@ public class XMLJava extends DefaultHandler implements ActionListener{
       xmlSelection.addActionListener(this);
       mainFrame.add(xmlSelection, BorderLayout.NORTH);
       
-      model = new DefaultTableModel(rowData, columnData);
       xmlDetails = new JTable(model);
       xmlDetails.setGridColor(Color.BLUE);
       tableContainer = new JScrollPane(xmlDetails);
@@ -357,13 +284,57 @@ public class XMLJava extends DefaultHandler implements ActionListener{
       XMLJava handler = new XMLJava();
    }//end of main
    
+
+/**
+*  Read xml data, write it to a file and display it in JTable based on the XML file chosen
+*/
+   public void loadTable() {
+      
+      String selection = xmlSelection.getSelectedItem().toString();
+      switch(selection) {
+         case "Rochester Sushi":
+            filename = "RochesterSushi.xml";
+            readData(filename);
+            updateJtable();
+            writeData(filename);
+            break;
+         case "San Francisco Sushi":
+            filename="SanFranciscoSushi.xml";
+            readData(filename);
+            updateJtable();
+            writeData(filename);
+            break;
+      }
+   }//end of loadTable()
+
+/**
+*  Stores parsed XML data into vector rows to display in JTable
+*/
+   public void updateJtable() {
+      model.setRowCount(0);
+      model.fireTableDataChanged();
+      DefaultTableModel tmodel = new DefaultTableModel();
+      tmodel.addColumn("Title");
+      tmodel.addColumn("Address");
+      tmodel.addColumn("Phone");
+      tmodel.addColumn("Average Rating");
+      tmodel.addColumn("Total Ratings");
+      tmodel.addColumn("Last Review Date");
+      for (int i = 0; i < resultCollection.size(); i++) {
+         Results resultItem = (Results)resultCollection.get(i);
+         String [] x = {resultItem.getTitle(), resultItem.getAddress(), resultItem.getPhone(), resultItem.getRating().getAverageRating(),
+                        resultItem.getRating().getTotalRating(), resultItem.getRating().getLastReviewDate()};
+      
+         tmodel.addRow(x);
+      xmlDetails.setModel(tmodel);     
+      }    
+   }//end of updateJtable()  
+   
 /**
 *  Event listener for GUI components
 *  @param e Event that is triggering an action
 */
    public void actionPerformed(ActionEvent e) {
-      if(e.getSource() == xmlSelection) {
-         loadTable();
-      }
-   }//end of actionPerformed()
+      loadTable();
+   }
 }
